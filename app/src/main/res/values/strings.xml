@@ -10,4 +10,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_history">History</string>
     <string name="menu_settings">Settings</string>
+    <string name="notification_title">notification_title\n</string>
+    <string name="notification_content">Jour blanc : %1$s, Jour bleu : %2$s, Jour rouge : %3$s</string>
+    <string name="notification_channel_name">notification_channel_name</string>
+    <string name="notification_channel_description">notification_channel_description</string>
 </resources>
