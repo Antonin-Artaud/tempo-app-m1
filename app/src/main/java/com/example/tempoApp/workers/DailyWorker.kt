@@ -11,19 +11,20 @@ import com.example.tempoApp.services.api.ApiService
 
 class DailyWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
 
-    private val LOGTAG = DailyWorker::class.simpleName
+    private val LOGTAG = "PROUT"
 
     override fun doWork(): Result {
         Log.d(LOGTAG,"doWork() is called")
 
         val apiHelper = ApiHelper.instance.create(ApiService::class.java)
         val call = apiHelper.getNbTempoDays()
+        val notif = NotificationHelper()
 
         return try {
             val response = call.execute() // Synchronous call
             if (response.isSuccessful) {
                 Log.d(LOGTAG,"call to getNbTempoDays() succeeded")
-                response.body()?.let { NotificationHelper.createNotification(applicationContext, it) }
+                response.body()?.let { notif.createNotification(applicationContext, it) }
                 Result.success()
             } else {
                 Log.d(LOGTAG,"call to getNbTempoDays() failed")

@@ -4,19 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_color"
     tools:context=".ui.settings.SettingsFragment">
 
     <TextView
-        android:id="@+id/text_settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/cadreNotif"
+        android:layout_width="395dp"
+        android:layout_height="53dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreNotif"
+        app:layout_constraintStart_toStartOf="@+id/cadreNotif"
+        app:layout_constraintTop_toTopOf="@+id/cadreNotif" />
+
+    <TextView
+        android:id="@+id/notifNotif"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:text="Notifications"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreNotif"
+        app:layout_constraintEnd_toEndOf="@+id/cadreNotif"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toEndOf="@+id/switchNotif"
+        app:layout_constraintTop_toTopOf="@+id/cadreNotif" />
+
+
+
+    <TextView
+        android:id="@+id/cadreRouge"
+        android:layout_width="395dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadreNotif" />
+
+    <Switch
+        android:id="@+id/switchRouge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreRouge"
+        app:layout_constraintStart_toStartOf="@+id/cadreRouge"
+        app:layout_constraintTop_toTopOf="@+id/cadreRouge" />
+
+    <TextView
+        android:id="@+id/notifRouge"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:text="Rouge"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreRouge"
+        app:layout_constraintEnd_toEndOf="@+id/cadreRouge"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toEndOf="@+id/switchRouge"
+        app:layout_constraintTop_toTopOf="@+id/cadreRouge" />
+
+    <TextView
+        android:id="@+id/cadreBlanc"
+        android:layout_width="395dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadreRouge" />
+
+
+    <Switch
+        android:id="@+id/switchBlanc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreBlanc"
+        app:layout_constraintStart_toStartOf="@+id/cadreBlanc"
+        app:layout_constraintTop_toTopOf="@+id/cadreBlanc" />
+
+    <TextView
+        android:id="@+id/notifBlanc"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:text="Blanc"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreBlanc"
+        app:layout_constraintEnd_toEndOf="@+id/cadreBlanc"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toEndOf="@+id/switchBlanc"
+        app:layout_constraintTop_toTopOf="@+id/cadreBlanc" />
+
+    <TextView
+        android:id="@+id/cadreBleu"
+        android:layout_width="395dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/cadreBlanc"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <Switch
+        android:id="@+id/switchBleu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreBleu"
+        app:layout_constraintStart_toStartOf="@+id/cadreBleu"
+        app:layout_constraintTop_toTopOf="@+id/cadreBleu" />
+
+    <TextView
+        android:id="@+id/notifBleu"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:text="Bleu"
+        app:layout_constraintBottom_toBottomOf="@+id/cadreBleu"
+        app:layout_constraintEnd_toEndOf="@+id/cadreBleu"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toEndOf="@+id/switchBleu"
+        app:layout_constraintTop_toTopOf="@+id/cadreBleu" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,7 @@ import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.tempoApp.databinding.ActivityMainBinding
+import com.example.tempoApp.ui.home.HomeViewModel
 import com.example.tempoApp.workers.DailyWorker
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
@@ -44,10 +45,6 @@ class MainActivity : AppCompatActivity() {
         initWorkerManager()
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
@@ -60,7 +57,6 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
         check4NotificationPermission()
     }
 
@@ -146,7 +142,7 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         // Build work request
-        val tmdbWorkRequest = PeriodicWorkRequestBuilder<DailyWorker>(1, TimeUnit.DAYS)
+        val tmdbWorkRequest = PeriodicWorkRequestBuilder<DailyWorker>(1, TimeUnit.SECONDS)
             .addTag("DAILY_WORKER")
             .setConstraints(constraints)
             .setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)

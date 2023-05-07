@@ -7,7 +7,7 @@ import com.example.tempoApp.R
 import com.example.tempoApp.models.NbTempDaysResponse
 
 class NotificationHelper {
-    companion object {
+    companion object
         fun createNotification(context : Context, d: NbTempDaysResponse) {
 
             // Create notification
@@ -23,5 +23,4 @@ class NotificationHelper {
             // TODO generate unique ID
             notificationManager.notify(2023, notification)
         }
-    }
 }
